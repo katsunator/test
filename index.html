@@ -8,6 +8,20 @@
 </head>
 <body>
     <h1>test website</h1>
+
+    <!-- 1. Load the Zoom Contact Center SDK -->
     <script type="module" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/zcc-sdk.js" data-apikey="7RS4iEpDToG4kwGDFWKfvg" data-env="us01"></script>
+
+    <!-- 2. Command Zoom to launch the widget -->
+    <script>
+      window.addEventListener('load', () => {
+        if (window.zcc) {
+          window.zcc.init({
+            apiKey: "7RS4iEpDToG4kwGDFWKfvg",
+            env: "us01"
+          });
+        }
+      });
+    </script>
 </body>
 </html>
